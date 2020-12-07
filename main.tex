@@ -1,0 +1,58 @@
+\documentclass[12pt,ngerman]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{eso-pic}
+\usepackage{xcolor}
+
+\usepackage{presentation}
+
+\usefonttheme{}
+
+\author{Robert Müller}
+\title{Presentation Title}
+\institute{FOM Hochschule für Oekonomie \& Management}
+
+\begin{document}
+
+\begin{frame}
+\maketitle
+\end{frame}
+
+\newcommand\AtPagemyUpperLeft[1]{\AtPageLowerLeft{%
+\put(\LenToUnit{0.925\paperwidth},\LenToUnit{0.91\paperheight}){#1}}}
+\AddToShipoutPictureFG{
+  \AtPagemyUpperLeft{{\includegraphics[width=1.cm,keepaspectratio]{logo.png}}}
+}%
+
+\begin{frame}
+\frametitle{Title}
+
+\begin{itemize}
+\item Some
+\item Itemized
+\item Points
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{With Bibtex Cites}
+
+Something interesting\cite{Example}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Sources}
+\bibliographystyle{abbrv}
+\bibliography{literature}
+\end{frame}
+\end{document}
